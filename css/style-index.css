@@ -1,0 +1,57 @@
+
+body{
+    background-image: url(../imgs/rick-and-morty-wallpaper-portal-wallpaper-001.jpg);
+
+}
+
+.pumblus-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto; /* Para centrar la imagen horizontalmente */
+}
+
+.pumblus-image img {
+    width: 100%;
+    height: auto;
+}
+.flechas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .flechas-container img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .flechas-container img:nth-child(1) {
+    top: -50px;
+    left: 300px;
+    transform: rotate();
+  }
+  
+  .flechas-container img:nth-child(2) {
+    top: 50px;
+    left: -320px;
+    transform: rotate(-50deg);
+  }
+  
+  .flechas-container img:nth-child(3) {
+    top: 55px;
+    right: -50px;
+    transform: rotate(240deg);
+  }
+   .flechas-container img:nth-child(4) {
+    top: -220px;
+    right: 140px;
+    transform: rotate();
+    transform: scaleX(-1);
+  }

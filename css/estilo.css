@@ -1,0 +1,11 @@
+.pumblusImpact{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.pumblus{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
