@@ -2,10 +2,14 @@
     background-color: green;
 }
 
-#cuerpo {
+body {
     background-image: url("../imgs/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: -2;
+    
+}
+
+.btnadmin {
+    color: white;
 }
