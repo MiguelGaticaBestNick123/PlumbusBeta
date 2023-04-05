@@ -13,3 +13,7 @@ body {
 .btnadmin {
     color: white;
 }
+
+.btn-secondary {
+    float: right;
+}

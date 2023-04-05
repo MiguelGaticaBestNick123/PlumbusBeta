@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Contactanos</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			color: #333;
+		}
+		form {
+			max-width: 500px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+		}
+		label {
+			display: block;
+			margin-top: 10px;
+			color: #333;
+		}
+		input[type=text], textarea {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+	</style>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	<h1>Contactanos!</h1>
+	<form>
+		<label for="name">Nombre:</label>
+		<input type="text" id="name" name="name" placeholder="Tu Nombre..">
+
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" placeholder="Tu email..">
+
+		<label for="subject">Asunto:</label>
+		<input type="text" id="subject" name="subject" placeholder="Asunto..">
+
+		<label for="message">Mensaje:</label>
+		<textarea id="message" name="message" placeholder="Redacte su problema o pregunta.." style="height:200px"></textarea>
+        <input type="submit" value="Enviar" class="btn btn-success">
+        <input type="submit" value="Volver al inicio" class="btn btn-secondary">
+	</form>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script>
+		// Mostrar ventana emergente al enviar el formulario
+		const form = document.querySelector('form');
+        const submitButton = document.querySelector('input[type=submit]');
+        const volverButton = document.querySelector('input[value="Volver al inicio"]');
+        submitButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            Swal.fire({
+                title: '¡Gracias!',
+                text: 'Su petición fue enviada con éxito. Lo contactaremos en breve.',
+                icon: 'success',
+                confirmButtonText: 'Cerrar'
+            })
+            form.reset();
+        });
+
+        volverButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = "index.html";
+        });
+	</script>
+</body>
+</html>
