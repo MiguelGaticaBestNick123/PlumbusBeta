@@ -17,3 +17,9 @@ body {
 .btn-secondary {
     float: right;
 }
+.btn{
+background-color: green;
+} 
+.btn-primary{
+    background-color: green;
+}
