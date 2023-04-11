@@ -3,13 +3,21 @@ body{
     background-image: url(../imgs/rick-and-morty-wallpaper-portal-wallpaper-001.jpg);
 
 }
+.pumblus-image {
+  position: relative;
+  margin: auto;
+  right: 0%;
+  top: -100px;
+  margin-left: -10%; /* Establecer margen izquierdo a auto */
+  margin-top: -25%;
+}
 
 .card-index{
   width: 100%;
   max-width: 300px; /* ajusta este valor según tus necesidades */
 }
 .image-card {
-  width: 200px;
+  width: 140px;
 }
 .flechas-container img {
   width: 200px;
@@ -24,8 +32,8 @@ body{
 }
 
 .flechas-container img:nth-child(2) {
-  top: 50px;
-  left: -320px;
+  top: 240px;
+  left: -12%;
   transform: rotate(-50deg);
 }
 
@@ -36,7 +44,7 @@ body{
 }
  .flechas-container img:nth-child(4) {
   top: -160px;
-  right: 140px;
+  right: -100px;
   transform: rotate();
   transform: scaleX(-1);
 }
@@ -131,3 +139,7 @@ body{
   }
 
    */ 
+
+
+
+   /* Debo crear medias  */
