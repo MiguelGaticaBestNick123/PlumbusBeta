@@ -7,14 +7,14 @@ body{
   position: relative;
   margin: auto;
   right: 0%;
-  top: -100px;
-  margin-left: -10%; /* Establecer margen izquierdo a auto */
+  top: 100px;
+  margin-left: -10%;
   margin-top: -25%;
 }
 
 .card-index{
   width: 100%;
-  max-width: 300px; /* ajusta este valor según tus necesidades */
+  max-width: 300px; 
 }
 .image-card {
   width: 140px;
@@ -25,7 +25,7 @@ body{
   position: relative;  
 }
 
-.flechas-container img:nth-child(1) {
+/* .flechas-container img:nth-child(1) {
   top: -50px;
   left: 150px;
   transform: rotate(2);
@@ -40,12 +40,14 @@ body{
 .flechas-container img:nth-child(3) {
   top: 55px;
   right: -50px;
-  transform: rotate(240deg);
-}
+  transform: rotate(240deg); */
+/* }  */
  .flechas-container img:nth-child(4) {
+  position: relative;
+  margin: auto;
   top: -160px;
-  right: -100px;
-  transform: rotate();
+  right: 100%;
+  transform: rotate(230deg);
   transform: scaleX(-1);
 }
 
