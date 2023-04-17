@@ -12,6 +12,9 @@ body {
 
 }
 
+.squanchy-bg{
+  z-index: -1;
+}
 /* .jerry{
   width: 210%;
   margin: auto;
@@ -23,6 +26,7 @@ body {
 .altura-container {
   min-height: 1080px;
 }
+
 
 .video-pumblus {
   width: 100%;
@@ -74,9 +78,9 @@ body {
   transform: scaleX(-1);
 }
 
-.pumbluslogin {
+/* .pumbluslogin {
   margin-left: 1500px;
-}
+} */
 
 /* .overlay {
   position: absolute;
