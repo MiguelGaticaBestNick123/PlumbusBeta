@@ -1,8 +1,7 @@
-$(function () {
-    $('[data-toggle="popover"]').popover({
-        placement: 'top', // Ubicación del Popover en relación a la imagen
-        trigger: 'click', // Acción que activa el Popover
-        html: true, // Permite utilizar HTML dentro del contenido del Popover
-        content: '<p>¡Bienvenido a mi tienda de Pumblus!</p><p>Compra ahora tu Pumblus y descubre para qué sirve.</p>' // Contenido del Popover
-    })
-})
+  // Pumblus Pop
+function showConsequences() {
+  var consequencesWindow = window.open("", "Consequences", "width=400, height=530");
+  var consequencesImage = document.createElement("img");
+  consequencesImage.src = "E:/PWEB/Proyecto/Pumblus0/PlumbusBeta/imgs/PM-187.webp";
+  consequencesWindow.document.body.appendChild(consequencesImage);
+}
