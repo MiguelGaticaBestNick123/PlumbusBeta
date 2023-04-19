@@ -6,6 +6,7 @@ body {
     background-image: url("../imgs/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
     background-size: cover;
     position: relative;
+    z-index: -2;
     
 }
 
@@ -15,4 +16,10 @@ body {
 
 .btn-secondary {
     float: right;
+}
+.btn{
+background-color: green;
+} 
+.btn-primary{
+    background-color: green;
 }

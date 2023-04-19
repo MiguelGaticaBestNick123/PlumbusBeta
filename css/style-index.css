@@ -1,31 +1,57 @@
-
-body{
-    background-image: url(../imgs/rick-and-morty-wallpaper-portal-wallpaper-001.jpg);
+body {
+  background-image: url(../imgs/rick-and-morty-wallpaper-portal-wallpaper-001.jpg);
 
 }
+
 .pumblus-image {
-  position: relative;
   margin: auto;
   right: 0%;
-  top: -100px;
-  margin-left: -10%; /* Establecer margen izquierdo a auto */
-  margin-top: -25%;
+  top: -150px;
+  margin-left: 10%;
+  margin-top: 35%;
+
 }
 
-.card-index{
-  width: 100%;
-  max-width: 300px; /* ajusta este valor según tus necesidades */
+.squanchy-bg{
+  z-index: -1;
 }
+/* .jerry{
+  width: 210%;
+  margin: auto;
+  right: 0%;
+  margin-left: -260%;
+  margin-top: 35%;
+} */
+
+.altura-container {
+  min-height: 1080px;
+}
+
+
+.video-pumblus {
+  width: 100%;
+  height: 90%;
+}
+
+
+
+
+.card-index {
+  width: 100%;
+  max-width: 300px;
+}
+
 .image-card {
   width: 140px;
 }
+
 .flechas-container img {
-  width: 200px;
-  height: 200px;
-  position: relative;  
+  width: 350px;
+  height: 350px;
+  position: relative;
 }
 
-.flechas-container img:nth-child(1) {
+/* .flechas-container img:nth-child(1) {
   top: -50px;
   left: 150px;
   transform: rotate(2);
@@ -40,14 +66,33 @@ body{
 .flechas-container img:nth-child(3) {
   top: 55px;
   right: -50px;
-  transform: rotate(240deg);
-}
- .flechas-container img:nth-child(4) {
-  top: -160px;
-  right: -100px;
-  transform: rotate();
+  transform: rotate(240deg); */
+/* }  */
+.Flecha-CSS {
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  top: -10px;
+  right: -15%;
+  transform: rotate(230deg);
   transform: scaleX(-1);
 }
+
+/* .pumbluslogin {
+  margin-left: 1500px;
+} */
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3000px;
+  border-left-width: 3000px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+} */
+
 
 /* .card-index {
     display: flex;
@@ -65,7 +110,7 @@ body{
 .card-index {
   width: 100%;
   max-width: 300px; /* ajusta este valor según tus necesidades */
-  /* margin: auto;
+/* margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,8 +183,8 @@ body{
     transform: scaleX(-1);
   }
 
-   */ 
+   */
 
 
 
-   /* Debo crear medias  */
+/* Debo crear medias  */
