@@ -15,14 +15,16 @@ body::before {
 .pumbluslogin{
     margin-left: 1500px;
   }
-  .altura-container{
-    min-height: 900px;
-  }
+  /* .altura-container{
+    min-height: 00px;
+  } */
   .video-pumblus{
     width: 100%;
     height: 90%;
   }
 
   .squanchy{
-    min-width: 400px;
+    width: 100%;
+    height: 60%;
+    margin-top: 25%;
   }
