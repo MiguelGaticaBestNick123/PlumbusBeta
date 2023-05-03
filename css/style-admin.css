@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 #header{
-    background-color: green;
+    background-color: #1F2326;
 }
 :root {
     scroll-behavior: smooth;
@@ -45,24 +45,24 @@ h6 {
   # Main
   --------------------------------------------------------------*/
 #main {
-    background-color: #1daf20;
+    background-color: #42A614;
 
     margin-top: 60px;
     padding: 20px 30px;
     transition: all 0.3s;
 }
 .main{
-    background-color: #1daf20;
+    background-color: #42A614;
     ;
 
 }
 main{
-    background-color: #187f19;
+    background-color: #42A614;
 
 }
 @media (max-width: 1199px) {
     #main {
-        background-color: #1daf20;
+        background-color: #42A614;
 
         padding: 20px;
     }
@@ -643,8 +643,8 @@ main{
 .sidebar::-webkit-scrollbar-thumb {
     background-color: #aab7cf;
 }
-.sidebar{
-    background-color: #1daf20;
+.sidebar{  /*LATERAL*/
+    background-color: #1F2326;
 }
 @media (min-width: 1200px) {
 
@@ -711,11 +711,11 @@ main{
 .sidebar-nav .nav-link i {
     font-size: 16px;
     margin-right: 10px;
-    color: #4154f1;
+    color: #1F2326;
 }
 
 .sidebar-nav .nav-link.collapsed {
-    color: #012970;
+    color: #1F2326;
     background: #fff;
 }
 
@@ -729,7 +729,7 @@ main{
 }
 
 .sidebar-nav .nav-link:hover i {
-    color: #4154f1;
+    color: #1F2326;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -752,7 +752,7 @@ main{
     align-items: center;
     font-size: 14px;
     font-weight: 600;
-    color: #012970;
+    color: #eaedf1;
     transition: 0.3;
     padding: 10px 0 10px 40px;
     transition: 0.3s;
@@ -1008,7 +1008,7 @@ main{
     font-size: 12px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #666;
+    color: #42A614;
 }
 
 /*--------------------------------------------------------------
@@ -1234,7 +1234,7 @@ main{
     padding: 20px 0;
     font-size: 14px;
     transition: all 0.3s;
-    border-top: 1px solid #cddfff;
+    border-top: 1px solid #1F2326;
 }
 
 .footer .copyright {
@@ -1246,5 +1246,5 @@ main{
     padding-top: 5px;
     text-align: center;
     font-size: 13px;
-    color: #012970;
+    color: #1F2326;
 }
