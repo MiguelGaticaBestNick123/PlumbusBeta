@@ -202,7 +202,7 @@
 
               <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                 <img src="imgs/foto-perfil.jpg" alt="Profile" class="rounded-circle">
-                <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                <span class="d-none d-md-block dropdown-toggle ps-2">Alejandro Sepulveda</span>
               </a><!-- End Profile Iamge Icon -->
 
               <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -402,7 +402,7 @@
 
       <div class="container-fluid">
         <div class="col-12">
-          <div class="card top-selling overflow-auto">
+          <div class="card top-selling overflow-auto bg-dark">
 
 
 
@@ -412,62 +412,60 @@
               <table class="table table-borderless">
                 <thead>
                   <tr class="text-light">
-                    <th scope="col">Preview</th>
+                    <th scope="col">Imagen</th>
                     <th scope="col">Producto</th>
-                    <th scope="col">Antiguo Precio</th>
                     <th scope="col">Precio actual</th>
+                    <th scope="col">Nuevo precio</th>
                     <th scope="col">Diferencia</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="border border-3 border-secondary text-light">
                     <th scope="row"><a href="#"><img src="imgs/plumbusmario.png" width="450" alt=""></a></th>
-                    <td><a href="#" class="text- fw-bold">Pumblus Mario</a></td>
-                    <td>$64</td>
-                    <td class="fw-bold"> <input type="text"></td>
-                    <td>$5,828 
-                      <button type="button" class="btn btn-success">Ajustar</button>
+                    <td><a href="#" class="name-product fw-bold">Pumblus Mario</a></td>
+                    <td id="precio-mario">$64</td>
+                    <td class="fw-bold"> <input type="text" id="input-mario"></td>
+                    <td id="diferencia-mario">$5828 </td>
+                    <td><button type="button" onclick="calcularDiferenciaMario()" class="btn btn-success" id="ajustar-mario">Ajustar</button></td>
+                </tr>
+                <tr class="border border-3 border-secondary text-light">
+                    <th scope="row"><a href="#"><img src="imgs/plumbuszeldaarreglado.png"></a></th>
+                    <td><a href="#" class="name-product fw-bold">Pumblus Zelda</a></td>
+                    <td id="precio-zelda">$46</td>
+                    <td class="fw-bold"> <input type="text" id="input-zelda"></td>
+                    <td id="diferencia-zelda">$4508 </td>
+                    <td> <button type="button" onclick="calcularDiferenciaZelda()" class="btn btn-success" id="ajustar-zelda">Ajustar</button></td>
+                </tr>
+                <tr class="border border-3 border-secondary text-light">
+                    <th scope="row"><a href="#"><img src="imgs/plumbusavatar.png" width="450" alt=""></a>
+                    </th>
+                    <td><a href="#" class="name-product fw-bold">Pumblus Avatar</a></td>
+                    <td id="precio-avatar">$59</td>
+                    <td class="fw-bold"> <input type="text" id="input-avatar"></td>
+                    <td id="diferencia-avatar">$4366 </td>
+                    <td> <button type="button" onclick="calcularDiferenciaAvatar()" class="btn btn-success" id="ajustar-avatar">Ajustar</button></td>
+                </tr>
+                  <tr class="border border-3 border-secondary text-light">
+                    <th scope="row"><a href="#"><img src="imgs/plumbussonic.png" width="450"></a></th>
+                    <td><a href="#" class="name-product fw-bold">Pumblus Sonic</a></td>
+                    <td id="precio-sonic">$32</td>
+                    <td class="fw-bold"> <input id="input-sonic" type="text"></td>
+                    <td id="diferencia-sonic">$2016 </td>
+                    <td>  <button type="button" onclick="calcularDiferenciaSonic()" id="ajustar-sonic" class="btn btn-success">Ajustar</button>
+                    </td>
+                  </tr>
+                  <tr class="border border-3 border-secondary text-light">
+                    <th scope="row"><a href="#"><img src="imgs/pumblus-x.png" width="500"></a></th>
+                    <td><a href="#" class="name-product fw-bold">PumblusX</a></td>
+                    <td id="precio-squanchy">$30</td>
+                    <td class="fw-bold"> <input id="input-squanchy" type="text"></td>
+                    <td id="diferencia-squanchy">$3 </td>
+                      <td><button type="button" class="btn btn-success" onclick="calcularDiferencia()" id="ajustar-squanchy">Ajustar</button>
                     </td>
                     
                   </tr>
-                  <tr class="border border-3 border-secondary text-light">
-                    <th scope="row"><a href="#"><img src="imgs/plumbuszeldaarreglado.png"></a></th>
-                    <td><a href="#" class="text-primary fw-bold">Pumblus Zelda</a></td>
-                    <td>$46</td>
-                    <td class="fw-bold"> <input type="text"></td>
-                    <td>$4,508
-                      <button type="button" class="btn btn-success">Ajustar</button>
-                    </td>
-                  </tr>
-                  <tr class="border border-3 border-secondary text-light">
-                    <th scope="row"><a href="#"><img src="imgs/artworks-000148141394-6qylah-t500x500.jpg" width="450" alt=""></a>
-                    </th>
-                    <td><a href="#" class="text-primary fw-bold">Pumblus enmascarado</a></td>
-                    <td>$59</td>
-                    <td class="fw-bold"> <input type="text"></td>
-                    <td>$4,366
-                      <button type="button" class="btn btn-success">Ajustar</button>
-                    </td>
-                  </tr>
-                  <tr class="border border-3 border-secondary text-light">
-                    <th scope="row"><a href="#"><img src="imgs/plumbussonic.png" width="450"></a></th>
-                    <td><a href="#" class="text-primary fw-bold">Pumblus Sonic</a></td>
-                    <td>$32</td>
-                    <td class="fw-bold"> <input type="text"></td>
-                    <td>$2,016
-                      <button type="button" class="btn btn-success">Ajustar</button>
-                    </td>
-                  </tr>
-                  <tr class="border border-3 border-secondary text-light">
-                    <th scope="row"><a href="#"><img src="imgs/Squanchy.png" width="500"></a></th>
-                    <td><a href="#" class="text-primary fw-bold">Squanchy</a></td>
-                    <td>$79</td>
-                    <td class="fw-bold"> <input type="text"></td>
-                    <td>$3,239
-                      <button type="button" class="btn btn-success">Ajustar</button>
-                    </td>
-                  </tr>
-                  <a href="index-admin.html" class="btn btn-success btn-block">Volver atrás</a>
+                  <tr> <a href="index-admin.html" class="btn btn-success btn-block">Volver atrás</a></tr>
+                  
 
                 </tbody>
               </table>
@@ -490,7 +488,7 @@
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Diseñado por <a href="https://depor.com/resizer/oPf-2Xij6G_oA4sfJ7Y5DGDQYhM=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/DAYT2F5NUNB7VPAFKUPHNDXVQA.jpg">Alejandro</a>
+      Diseñado por <a href="https://depor.com/resizer/oPf-2Xij6G_oA4sfJ7Y5DGDQYhM=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/DAYT2F5NUNB7VPAFKUPHNDXVQA.jpg" class="pene">Alejandro</a>
     </div>
   </footer><!-- End Footer -->
 
@@ -508,7 +506,113 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+  <!-- squanchy precio  -->
+  <script>
+    function calcularDiferencia() {
+        const ajustarSquanchyBtn = document.getElementById("ajustar-squanchy");
+        var precioAnterior = parseInt(document.getElementById("precio-squanchy").textContent.substring(1));
+        var nuevoPrecio = parseInt(document.getElementById("input-squanchy").value);
+        var diferencia = nuevoPrecio - precioAnterior;
+        document.getElementById("diferencia-squanchy").textContent = "$" + diferencia;
+        document.getElementById("precio-squanchy").textContent = "$" + nuevoPrecio;
 
+        ajustarSquanchyBtn.addEventListener("click", () => {
+          document.getElementById("precio-squanchy").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-squanchy").textContent = "$" + diferencia;
+            precioAnterior = nuevoPrecio;
+            nuevoPrecio = parseInt(document.getElementById("input-squanchy").value);
+            diferencia = nuevoPrecio - precioAnterior;
+            document.getElementById("precio-squanchy").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-squanchy").textContent = "$" + diferencia;
+        });
+    }
+</script>
+  <!-- mario precio  -->
+  <script>
+     function calcularDiferenciaMario() {
+        const ajustarMarioBtn = document.getElementById("ajustar-mario");
+        var precioAnterior = parseInt(document.getElementById("precio-mario").textContent.substring(1));
+        var nuevoPrecio = parseInt(document.getElementById("input-mario").value);
+        var diferencia = nuevoPrecio - precioAnterior;
+        document.getElementById("diferencia-mario").textContent = "$" + diferencia;
+        document.getElementById("precio-mario").textContent = "$" + nuevoPrecio;
+
+        ajustarMarioBtn.addEventListener("click", () => {
+          document.getElementById("precio-mario").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-mario").textContent = "$" + diferencia;
+            precioAnterior = nuevoPrecio;
+            nuevoPrecio = parseInt(document.getElementById("input-mario").value);
+            diferencia = nuevoPrecio - precioAnterior;
+            document.getElementById("precio-mario").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-mario").textContent = "$" + diferencia;
+        });
+    }
+</script>
+<!-- zelda precio  -->
+<script>
+ function calcularDiferenciaZelda() {
+        const ajustarZeldaBtn = document.getElementById("ajustar-zelda");
+        var precioAnterior = parseInt(document.getElementById("precio-zelda").textContent.substring(1));
+        var nuevoPrecio = parseInt(document.getElementById("input-zelda").value);
+        var diferencia = nuevoPrecio - precioAnterior;
+        document.getElementById("diferencia-zelda").textContent = "$" + diferencia;
+        document.getElementById("precio-zelda").textContent = "$" + nuevoPrecio;
+
+        ajustarZeldaBtn.addEventListener("click", () => {
+          document.getElementById("precio-zelda").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-zelda").textContent = "$" + diferencia;
+            precioAnterior = nuevoPrecio;
+            nuevoPrecio = parseInt(document.getElementById("input-zelda").value);
+            diferencia = nuevoPrecio - precioAnterior;
+            document.getElementById("precio-zelda").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-zelda").textContent = "$" + diferencia;
+        });
+    }
+</script>
+<!-- sonic precio  -->
+<script>
+  function calcularDiferenciaSonic() {
+        const ajustarSonicBtn = document.getElementById("ajustar-sonic");
+        var precioAnterior = parseInt(document.getElementById("precio-sonic").textContent.substring(1));
+        var nuevoPrecio = parseInt(document.getElementById("input-sonic").value);
+        var diferencia = nuevoPrecio - precioAnterior;
+        document.getElementById("diferencia-sonic").textContent = "$" + diferencia;
+        document.getElementById("precio-sonic").textContent = "$" + nuevoPrecio;
+
+        ajustarSonicBtn.addEventListener("click", () => {
+          document.getElementById("precio-sonic").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-sonic").textContent = "$" + diferencia;
+            precioAnterior = nuevoPrecio;
+            nuevoPrecio = parseInt(document.getElementById("input-sonic").value);
+            diferencia = nuevoPrecio - precioAnterior;
+            document.getElementById("precio-sonic").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-sonic").textContent = "$" + diferencia;
+        });
+    }
+</script>
+<!-- avatar precio   -->
+
+<script>
+  function calcularDiferenciaAvatar() {
+        const ajustarAvatarBtn = document.getElementById("ajustar-avatar");
+        var precioAnterior = parseInt(document.getElementById("precio-avatar").textContent.substring(1));
+        var nuevoPrecio = parseInt(document.getElementById("input-avatar").value);
+        var diferencia = nuevoPrecio - precioAnterior;
+        document.getElementById("diferencia-avatar").textContent = "$" + diferencia;
+        document.getElementById("precio-avatar").textContent = "$" + nuevoPrecio;
+
+        ajustarAvatarBtn.addEventListener("click", () => {
+          document.getElementById("precio-avatar").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-avatar").textContent = "$" + diferencia;
+            precioAnterior = nuevoPrecio;
+            nuevoPrecio = parseInt(document.getElementById("input-avatar").value);
+            diferencia = nuevoPrecio - precioAnterior;
+            document.getElementById("precio-avatar").textContent = "$" + nuevoPrecio;
+            document.getElementById("diferencia-avatar").textContent = "$" + diferencia;
+        });
+    }
+</script>
+<!-- fin  -->
 
     </body>
 

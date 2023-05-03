@@ -18,7 +18,7 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    background: #f6f9ff;
+    background: #1F2326;
     color: #444444;
 }
 
@@ -387,7 +387,7 @@ main{
 .logo span {
     font-size: 26px;
     font-weight: 700;
-    color: black;
+    color: snow;
     font-family: "Nunito", sans-serif;
 }
 
@@ -406,7 +406,7 @@ main{
     font-size: 32px;
     padding-left: 10px;
     cursor: pointer;
-    color: black;
+    color: whitesmoke;
 }
 
 .header .search-bar {
@@ -489,7 +489,7 @@ main{
 }
 
 .header-nav .nav-profile {
-    color: black;
+    color: snow;
 }
 
 .header-nav .nav-profile img {
@@ -1239,12 +1239,18 @@ main{
 
 .footer .copyright {
     text-align: center;
-    color: #012970;
+    color: #eceefe;
 }
 
 .footer .credits {
     padding-top: 5px;
     text-align: center;
     font-size: 13px;
-    color: #1F2326;
+    color: #eceefe;
+}
+.pene{
+    color: #eceefe;
+}
+.name-product{
+    color: whitesmoke;
 }
