@@ -322,25 +322,25 @@ main{
 .breadcrumb {
     font-size: 14px;
     font-family: "Nunito", sans-serif;
-    color: black;
+    color: snow;
     font-weight: 600;
 }
 
 .breadcrumb a {
-    color: black;
+    color: snow;
     transition: 0.3s;
 }
 
 .breadcrumb a:hover {
-    color: black;
+    color: snow;
 }
 
 .breadcrumb .breadcrumb-item::before {
-    color: black;
+    color: snow;
 }
 
 .breadcrumb .active {
-    color: black;
+    color: snow;
     font-weight: 600;
 }
 
@@ -483,7 +483,7 @@ main{
 
 .header-nav .nav-icon {
     font-size: 22px;
-    color: black;
+    color: whitesmoke;
     margin-right: 25px;
     position: relative;
 }
@@ -724,7 +724,7 @@ main{
 }
 
 .sidebar-nav .nav-link:hover {
-    color: #4154f1;
+    color: #42A614;  /*perkin*/
     background: #f6f9ff;
 }
 
