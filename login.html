@@ -45,7 +45,7 @@
                 <div class="card">
                     <div class="card-header bg-success text-white" id="card">Inicio de Sesión</div>
                     <div class="card-body">
-                        <form action="paginapago.html">
+                        <form id="login-form" action="paginapago.html" onsubmit="return validarFormulario()">
                             <div class="form-group">
                             <label for="username">Nombre de Usuario</label>
                             <input type="text" class="form-control" id="username" placeholder="Ingresa tu nombre de usuario">
@@ -78,7 +78,19 @@
         <button style="background-color:forestgreen;" type="submit" class="btnadmin" >Volver al inicio</button>
         </a>
     </div>
-
+    <script>
+        function validarFormulario() {
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+        
+          if (username == "" || password == "") {
+            alert("Por favor, complete todos los campos para continuar");
+            return false;
+          }
+        
+          return true;
+        }
+        </script>
 
 </body>
 </html>
