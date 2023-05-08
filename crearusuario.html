@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <!-- Archivos JS de Bootstrap (jQuery y Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/ruta/a/jquery.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -93,71 +95,72 @@
         
         <script src="js/validarcontra.js"></script>
     <script>
-        function validateForm(event) {
-            event.preventDefault(); // detiene el envío del formulario si hay errores
-            var form = document.getElementById("register-form");
-            var nombre = form["nombre"].value;
-            var apellido = form["apellido"].value;
-            var rut = form["rut"].value;
-            var email = form["email"].value;
-            var password = form["password"].value;
-            var confirmarPassword = form["confirmarPassword"].value;
-            var valid = true;
-            // Validar nombre
-            if (!nombre) {
-                valid = false;
-                document.querySelector(".nombre-error").textContent = "Debe ingresar un nombre";
-            } else {
-                document.querySelector(".nombre-error").textContent = "";
-            }
-            // Validar apellido
-            if (!apellido) {
-                valid = false;
-                document.querySelector(".apellido-error").textContent = "Debe ingresar un apellido";
-            } else {
-                document.querySelector(".apellido-error").textContent = "";
-            }
-            // Validar rut
-            if (!validateRut()) {
-                valid = false;
-                document.querySelector(".rut-error").textContent = "El RUT ingresado no es válido";
-            } else {
-                document.querySelector(".rut-error").textContent = "";
-            }
-            // Validar email
-            if (!email) {
-                valid = false;
-                document.querySelector(".email-error").textContent = "Debe ingresar un email";
-            } else if (!/\S+@\S+\.\S+/.test(email)) {
-                valid = false;
-                document.querySelector(".email-error").textContent = "El email ingresado no es válido";
-            } else {
-                document.querySelector(".email-error").textContent = "";
-            }
-            // Validar password
-            if (!password) {
-                valid = false;
-                document.querySelector(".password-error").textContent = "Debe ingresar una contraseña";
-            } else if (password.length < 8 || !/\d/.test(password)) {
-                valid = false;
-                document.querySelector(".password-error").textContent = "La contraseña debe tener al menos 8 caracteres y contener al menos un número";
-            } else {
-                document.querySelector(".password-error").textContent = "";
-            }
-            // Validar confirmarPassword
-            if (!confirmarPassword) {
-                valid = false;
-                document.querySelector(".confirmarPassword-error").textContent = "Debe confirmar la contraseña";
-            } else if (password !== confirmarPassword) {
-                valid = false;
-                document.querySelector(".confirmarPassword-error").textContent = "Las contraseñas no coinciden";
-            } else {
-                document.querySelector(".confirmarPassword-error").textContent = "";
-            }
-            if (valid) {
-                form.submit();
-            }
-        }
+        function validateForm() {
+    event.preventDefault(); // detiene el envío del formulario si hay errores
+    var form = document.getElementById("register-form");
+    var nombre = form["nombre"].value;
+    var apellido = form["apellido"].value;
+    var rut = form["rut"].value;
+    var email = form["email"].value;
+    var password = form["password"].value;
+    var confirmarPassword = form["confirmarPassword"].value;
+    var valid = true;
+    // Validar nombre
+    if (!nombre) {
+        valid = false;
+        document.querySelector(".nombre-error").textContent = "Debe ingresar un nombre";
+    } else {
+        document.querySelector(".nombre-error").textContent = "";
+    }
+    // Validar apellido
+    if (!apellido) {
+        valid = false;
+        document.querySelector(".apellido-error").textContent = "Debe ingresar un apellido";
+    } else {
+        document.querySelector(".apellido-error").textContent = "";
+    }
+    // Validar RUT
+    if (!validateRut(rut)) {
+        valid = false;
+        document.querySelector(".rut-error").textContent = "RUT inválido";
+    } else {
+        document.querySelector(".rut-error").textContent = "";
+    }
+    // Validar email
+    if (!email) {
+        valid = false;
+        document.querySelector(".email-error").textContent = "Debe ingresar un email";
+    } else {
+        document.querySelector(".email-error").textContent = "";
+    }
+    // Validar contraseña
+    if (!validatePassword(password)) {
+        valid = false;
+        document.querySelector(".password-error").textContent = "La contraseña debe tener al menos 8 caracteres y contener al menos un número";
+    } else {
+        document.querySelector(".password-error").textContent = "";
+    }
+    // Validar confirmación de contraseña
+    if (password !== confirmarPassword) {
+        valid = false;
+        document.querySelector(".confirmarPassword-error").textContent = "Las contraseñas no coinciden";
+    } else {
+        document.querySelector(".confirmarPassword-error").textContent = "";
+    }
+    // Enviar formulario si todo está válido
+    if (valid) {
+        form.submit();
+    }
+}
+// Validar campos
+
+if (valid) {
+        // Formulario válido, redirigir al usuario a la página index.html
+        window.location.replace("index.html");
+    }
+
+
+
         
     </script>
     
