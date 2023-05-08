@@ -1,69 +1,77 @@
-function validatePassword() {
-    var password = document.getElementById("password").value;
-    var confirmPassword = document.getElementById("confirmarPassword").value;
-
-    if (password != confirmPassword) {
-        document.querySelector('.confirmarPassword-error').innerHTML = "Las contraseñas no coinciden";
-        return false;
-    }
-    else {
-        document.querySelector('.confirmarPassword-error').innerHTML = "";
-        return true;
-    }
-}
-
-function validateRut() {
-    var rut = document.getElementById("rut").value;
-    rut = rut.replace(/[^\d]/g, ""); // Elimina todo lo que no sea un número
-    document.getElementById("rut").value = rut;
-}
-
-function validateName() {
-    var name = document.getElementById("nombre").value;
-    if (name.length < 3) {
-        document.querySelector('.nombre-error').innerHTML = "El nombre debe tener al menos 3 caracteres";
-        return false;
-    }
-    else {
-        document.querySelector('.nombre-error').innerHTML = "";
-        return true;
-    }
-}
-
-function validateLastName() {
-    var lastName = document.getElementById("apellido").value;
-    if (lastName.length < 3) {
-        document.querySelector('.apellido-error').innerHTML = "El apellido debe tener al menos 3 caracteres";
-        return false;
-    }
-    else {
-        document.querySelector('.apellido-error').innerHTML = "";
-        return true;
-    }
-}
-
-function validateEmail() {
-    var email = document.getElementById("email").value;
-    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-    if (email.match(pattern)) {
-        document.querySelector('.email-error').innerHTML = "";
-        return true;
-    }
-    else {
-        document.querySelector('.email-error').innerHTML = "Por favor, ingrese un correo electrónico válido";
-        return false;
-    }
-}
-
-document.getElementById("register-form").onsubmit = function() {
+function validateForm() {
+    event.preventDefault(); // detiene el envío del formulario si hay errores
+    var form = document.getElementById("register-form");
+    var nombre = form["nombre"].value;
+    var apellido = form["apellido"].value;
+    var rut = form["rut"].value;
+    var email = form["email"].value;
+    var password = form["password"].value;
+    var confirmarPassword = form["confirmarPassword"].value;
     var valid = true;
-
-    valid = validatePassword() && valid;
-    valid = validateRut() && valid;
-    valid = validateName() && valid;
-    valid = validateLastName() && valid;
-    valid = validateEmail() && valid;
-
-    return valid;
+    // Validar nombre
+    if (!nombre) {
+        valid = false;
+        document.querySelector(".nombre-error").textContent = "Debe ingresar un nombre";
+    } else {
+        document.querySelector(".nombre-error").textContent = "";
+    }
+    // Validar apellido
+    if (!apellido) {
+        valid = false;
+        document.querySelector(".apellido-error").textContent = "Debe ingresar un apellido";
+    } else {
+        document.querySelector(".apellido-error").textContent = "";
+    }
+    // Validar RUT
+    if (!validateRut(rut)) {
+        valid = false;
+        document.querySelector(".rut-error").textContent = "RUT inválido";
+    } else {
+        document.querySelector(".rut-error").textContent = "";
+    }
+    // Validar email
+    if (!email) {
+        valid = false;
+        document.querySelector(".email-error").textContent = "Debe ingresar un email";
+    } else {
+        document.querySelector(".email-error").textContent = "";
+    }
+    // Validar contraseña
+    if (!validatePassword(password, confirmarPassword)) {
+        valid = false;
+        document.querySelector(".password-error").textContent = "La contraseña debe tener al menos 8 caracteres y contener al menos un número";
+    } else {
+        document.querySelector(".password-error").textContent = "";
+    }
+    // Enviar formulario si todo está válido
+    if (valid) {
+        form.submit();
+    }
 }
+
+function validatePassword(password, confirmPassword) {
+    if (password.length < 8 || !/\d/.test(password)) {
+        return false;
+    }
+    return password === confirmPassword;
+}
+
+function validaRut(rutCompleto) {
+    rutCompleto = rutCompleto.replace(/\./g, '').replace('-', '').toUpperCase();
+    if (!/^[0-9]{1,9}[0-9K]$/.test(rutCompleto)) {
+      return false;
+    }
+    var rut = rutCompleto.substring(0, rutCompleto.length - 1);
+    var dv = rutCompleto.charAt(rutCompleto.length - 1);
+    var suma = 0;
+    var factor = 2;
+    for (var i = rut.length - 1; i >= 0; i--) {
+      suma += factor * rut.charAt(i);
+      factor = factor === 7 ? 2 : factor + 1;
+    }
+    var dvCalculado = 11 - (suma % 11);
+    dvCalculado = dvCalculado === 10 ? "K" : dvCalculado;
+    dvCalculado = dvCalculado === 11 ? "0" : dvCalculado;
+    return dv === dvCalculado.toString();
+  }
+document.getElementById("register-form").addEventListener("submit", validateForm);
