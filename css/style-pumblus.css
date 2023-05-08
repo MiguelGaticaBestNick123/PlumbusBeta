@@ -27,3 +27,16 @@ body::before {
     height: 60%;
     margin-top: 25%;
   }
+
+  .img-flip {
+    transform: scaleX(-1);
+  }
+  .text-con-background .texto-error {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateY(-25%);
+    font-size: 24px;
+    color: #fff;
+  }
+  

@@ -18,3 +18,16 @@ footer {
   .titulo-tienda{
     font-family: Montserrat, Arial, sans-serif;
 }
+
+@font-face {
+    font-family: 'get_schwifty';
+    src: url('../fonts/get_schwifty.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-rickandmorty {
+    font-family: 'get_schwifty', sans-serif;
+    font-size: 40px;
+    color: azure;
+  }
