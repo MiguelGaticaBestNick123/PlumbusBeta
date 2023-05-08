@@ -27,12 +27,33 @@ body {
   min-height: 1080px;
 }
 
+.height-1{
+  height: 55px;
+}
 
+@font-face {
+  font-family: 'get_schwifty';
+  src: url('../fonts/get_schwifty.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-rickandmorty {
+  font-family: 'get_schwifty', sans-serif;
+  font-size: 40px;
+  color: azure;
+}
+.bg-darkk {
+  background-color: #282c34 ;
+}
 .video-pumblus {
   width: 100%;
   height: 90%;
 }
 
+.shadoww {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
 
 
 
